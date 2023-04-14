@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/NavBar.css">
+    <link rel="stylesheet" href="/css/Acessar.css">
+    <link rel="icon" href="/img/logoRemasterizado.png">
+    <title>Acessar | TuneBox</title>
+</head>
+
+
+<body>
+    <div class="header" id="header">
+        <button onclick="openMenu()" class="btn_icon_header">
+            <img src="/img/icons8-lista-32.png" alt="Lista">
+        </button>
+        <div class="logo_header">
+            <a href="Inicio.html">
+            <img src="/img/Captura de tela 2023-04-14 145459.png" class="img_logo_header" alt="logo tuneBox">
+        </a>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="openMenu()" class="btn_icon_header">
+                <img src="/img/icons8-fechar-32.png" alt="Fechar">
+            </button>
+            <a href="Cadastro.html" class="active">Cadastro</a>
+            <a href="Password.html" class="active">Esqueceu sua senha</a>
+            <a href="Conteudo.html" class="active">Quem somos?</a>
+            <a href="Sair.html" class="active">Sair</a>
+        </div>
+    </div>
+    <div tabindex="0" onclick="closeSidebar()" class="Acessar" id="Acessar">
+        <h1>Login</h1>
+    </div>
+   
+
+    <script>
+        var header = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var Acessar = document.getElementById('Acessar');
+    var showSidebar = true;
+    
+    function openMenu(){
+        showSidebar = !showSidebar;
+        if(showSidebar){
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            Acessar.style.filter = 'blur(2px)';
+        }
+        else {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            Acessar.style.filter = '';
+        }
+    }
+    
+    function closeSidebar(){
+            if(showSidebar){
+                openMenu();
+            }
+        } 
+    
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 800 && showSidebar){
+            openMenu();
+        }
+    });
+    
+    </script>
+
+</body>

@@ -5,7 +5,7 @@
 }
 
 .img_logo_header{
-    width: 45px;
+    width: 150px;
 
 }
 
@@ -24,20 +24,25 @@
     padding: 0 10%;
 }
 
+
 .navigation_header{
     gap: 3em;
     z-index: 2;
 }
 
+
 .navigation_header a{
     text-decoration: none;
     color: white;
-    transition: 0.9s;
+    transition: 0.5s;
     font-weight: bold;
+    margin: 2px;
 }
 
-.active{
-    background-color: rgba(28, 13, 16, 0.337);
+.active:hover{
+    border: 4px solid rgb(144, 235, 230);
+    color: white;
+    background-color: rgb(67, 75, 75);
     border-radius: 10px;
     padding: 10px;
 }
@@ -56,7 +61,7 @@
    display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1920px) {
     .btn_icon_header{
         display: block;
     }
