@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Acesso.css">
+    <link rel="icon" href="/img/logoRemasterizado.png">
+    <title>TuneBox</title>
+</head>
+
+
+<body>
+    <div class="header" id="header">
+        <button onclick="openMenu()" class="btn_icon_header">
+            <img src="/img/icons8-lista-32.png" alt="Lista">
+        </button>
+        <div class="logo_header">
+            <img src="/img/logoRemasterizado.png" class="img_logo_header" alt="logo tuneBox">
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="openMenu()" class="btn_icon_header">
+                <img src="/img/icons8-fechar-32.png" alt="Fechar">
+            </button>
+            <a href="#" class="active">Cadastro</a>
+            <a href="#" class="active">Acessar</a>
+            <a href="#" class="active">Esqueceu sua senha</a>
+            <a href="#" class="active">Quem somos?</a>
+            <a href="#" class="active">Sair</a>
+        </div>
+    </div>
+    <div tabindex="0" onclick="closeSidebar()" class="conteudo" id="conteudo">
+        <h1>Aqui será a pagina de acesso ao site, onde o usuário vai decidir o que fazer </h1>
+    </div>
+   
+</body>
+
+<script>
+var header = document.getElementById('header');
+var navigationHeader = document.getElementById('navigation_header');
+var conteudo = document.getElementById('conteudo');
+var showSidebar = true;
+
+function openMenu(){
+    showSidebar = !showSidebar;
+    if(showSidebar){
+        navigationHeader.style.marginLeft = '-10vw';
+        navigationHeader.style.animationName = 'showSidebar';
+        conteudo.style.filter = 'blur(2px)';
+    }
+    else {
+        navigationHeader.style.marginLeft = '-100vw';
+        navigationHeader.style.animationName = '';
+        conteudo.style.filter = '';
+    }
+}
+
+function closeSidebar(){
+        if(showSidebar){
+            openMenu();
+        }
+    } 
+
+window.addEventListener('resize', function(event) {
+    if(window.innerWidth > 800 && showSidebar){
+        openMenu();
+    }
+});
+</script>
+</html>
