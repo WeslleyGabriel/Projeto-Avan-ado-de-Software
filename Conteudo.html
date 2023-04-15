@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,8 +19,8 @@
         </button>
         <div class="logo_header">
             <a href="Inicio.html">
-            <img src="/img/Captura de tela 2023-04-14 145459.png" class="img_logo_header" alt="logo tuneBox">
-        </a>
+                <img src="/img/Captura de tela 2023-04-14 145459.png" class="img_logo_header" alt="logo tuneBox">
+            </a>
         </div>
         <div class="navigation_header" id="navigation_header">
             <button onclick="openMenu()" class="btn_icon_header">
@@ -32,41 +33,75 @@
         </div>
     </div>
     <div tabindex="0" onclick="closeSidebar()" class="Conteudo" id="Conteudo">
-        <h1>sobre o projeto e a pagina</h1>
+        <div class="cont1" id="cont1">
+            <div class="titulo" id="titulo">
+                <h1>TuneBox Music</h1>
+                <p>Web site de músicas online!</p>
+                <br>
+                <hr>
+                <br>
+                <p class="texto-p">Bem-vindo ao nosso site de música, onde você pode encontrar suas músicas
+                    favoritas e descobrir novas,
+                    tudo em um só lugar! Nós usamos os serviços do YouTube para fornecer a você o melhor conteúdo de
+                    música
+                    possível. Aproveite nossa seleção de músicas e, se tiver alguma dúvida ou sugestão, não hesite em
+                    entrar em contato conosco. Estamos sempre felizes em ajudar nossos usuários a aproveitar ao máximo
+                    nosso site de música.</p>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <div class="container">
+                <div>
+                <h2>Quem somos? </h2> 
+                <p>TuneBox Music é um website de streaming de músicas que utiliza a API do YouTube para fornecer
+                    conteúdo aos usuários. O site possui uma interface amigável e oferece funcionalidades como cadastro
+                    de usuários, login e recuperação de senha. É uma plataforma voltada para o público em geral, com o
+                    objetivo de oferecer uma ampla variedade de músicas disponíveis para audição a qualquer momento. Com
+                    o TuneBox Music, os usuários podem descobrir novas músicas, criar playlists personalizadas e
+                    desfrutar de uma experiência musical de alta qualidade.</p>
+                </div>
+                    <img src="/img/squadFake.jpg" alt="squadFake">
+            </div>
+            <br>
+            <br>
+            <hr>
+        </div>
+
     </div>
-   
+
 
     <script>
-    var header = document.getElementById('header');
-    var navigationHeader = document.getElementById('navigation_header');
-    var Conteudo = document.getElementById('Conteudo');
-    var showSidebar = true;
-    
-    function openMenu(){
-        showSidebar = !showSidebar;
-        if(showSidebar){
-            navigationHeader.style.marginLeft = '-10vw';
-            navigationHeader.style.animationName = 'showSidebar';
-            Conteudo.style.filter = 'blur(2px)';
+        var header = document.getElementById('header');
+        var navigationHeader = document.getElementById('navigation_header');
+        var Conteudo = document.getElementById('Conteudo');
+        var showSidebar = true;
+
+        function openMenu() {
+            showSidebar = !showSidebar;
+            if (showSidebar) {
+                navigationHeader.style.marginLeft = '-10vw';
+                navigationHeader.style.animationName = 'showSidebar';
+                Conteudo.style.filter = 'blur(2px)';
+            }
+            else {
+                navigationHeader.style.marginLeft = '-100vw';
+                navigationHeader.style.animationName = '';
+                Conteudo.style.filter = '';
+            }
         }
-        else {
-            navigationHeader.style.marginLeft = '-100vw';
-            navigationHeader.style.animationName = '';
-            Conteudo.style.filter = '';
-        }
-    }
-    
-    function closeSidebar(){
-            if(showSidebar){
+
+        function closeSidebar() {
+            if (showSidebar) {
                 openMenu();
             }
-        } 
-    
-    window.addEventListener('resize', function(event) {
-        if(window.innerWidth > 800 && showSidebar){
-            openMenu();
         }
-    });
-    
+
+        window.addEventListener('resize', function (event) {
+            if (window.innerWidth > 800 && showSidebar) {
+                openMenu();
+            }
+        });
+
     </script>
 </body>

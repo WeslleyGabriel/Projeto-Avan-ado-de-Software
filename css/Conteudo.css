@@ -1,7 +1,50 @@
 
+h1{
+    font-weight: bolder;
+    font-size: 4vw;
+    color: rgb(105, 97, 97);
+}
+
+h2{
+    font-weight: bolder;
+    font-size: 3vw;
+}
+
 .Conteudo{
     text-align: center;
     padding-top: 3em;
     height: 100vw;
     transition: 1s;
 }
+
+.cont1{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    font-weight: bold;
+} 
+
+.texto-p{
+    text-align: justify;
+    font-size: 1.5vw;
+    color: rgba(71, 64, 64, 0.814);
+}
+
+.container {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 150px;
+    color: rgba(71, 64, 64, 0.814);
+    font-size: x-large;
+  }
+  
+  .container img {
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px;
+    margin-left: 80px;
+    width: 540px; /* Tamanho da imagem */
+    height: 420px;
+  }
