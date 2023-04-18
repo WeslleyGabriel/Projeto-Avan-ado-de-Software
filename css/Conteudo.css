@@ -5,9 +5,13 @@ h1{
     color: rgb(105, 97, 97);
 }
 
+
 h2{
     font-weight: bolder;
     font-size: 3vw;
+}
+p1{
+    color: rgba(41, 61, 61, 0.469);
 }
 
 .Conteudo{
@@ -18,7 +22,7 @@ h2{
 }
 
 .cont1{
-    text-align: justify;
+    text-align: center;
     display: flex;
     flex-direction: column;
     padding: 0 10%;
@@ -31,16 +35,34 @@ h2{
     color: rgba(71, 64, 64, 0.814);
 }
 
-.container {
+.container{
     text-align: justify;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 150px;
+    margin-top: 90px;
     color: rgba(71, 64, 64, 0.814);
     font-size: x-large;
   }
+
+  .container01{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(71, 64, 64, 0.814);
+    font-size: x-large;
+    text-align: justify;
+    margin-top: 100px;
+  }
   
+  .container01 img{
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px;
+    margin-right: 80px;
+    width: 3000px; /* Tamanho da imagem */
+    height: 400px;
+    
+  }
+
   .container img {
     border-radius: 30px;
     box-shadow: 1px 1px 5px;
