@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/NavBar.css">
-    <link rel="stylesheet" href="/css/Password.css">
+    <link rel="stylesheet" href="/css/Premiun.css">
     <link rel="icon" href="/img/logoRemasterizado.png">
-    <title>Esqueceu sua senha | TuneBox</title>
+    <title>Premiun | TuneBox</title>
 </head>
 
 
@@ -26,21 +26,20 @@
                 <img src="/img/icons8-fechar-32.png" alt="Fechar">
             </button>
             <a href="Cadastro.html" class="active">Cadastro</a>
-            <a href="Acessar.html" class="active">Acessar</a>
+            <a href="Password.html" class="active">Esqueceu sua senha</a>
             <a href="Conteudo.html" class="active">Quem somos?</a>
-            <a href="Premiun.html" class="active">Premiun</a>
             <a href="Sair.html" class="active">Sair</a>
         </div>
     </div>
-    <div tabindex="0" onclick="closeSidebar()" class="Password" id="Password">
-        <h1>esqueci a senha </h1>
+    <div tabindex="0" onclick="closeSidebar()" class="Premiun" id="Premiun">
+        <h1>Assinar premiun</h1>
     </div>
    
 
     <script>
         var header = document.getElementById('header');
     var navigationHeader = document.getElementById('navigation_header');
-    var Password = document.getElementById('Password');
+    var Acessar = document.getElementById('Acessar');
     var showSidebar = true;
     
     function openMenu(){
@@ -48,12 +47,12 @@
         if(showSidebar){
             navigationHeader.style.marginLeft = '-10vw';
             navigationHeader.style.animationName = 'showSidebar';
-            Password.style.filter = 'blur(2px)';
+            Acessar.style.filter = 'blur(2px)';
         }
         else {
             navigationHeader.style.marginLeft = '-100vw';
             navigationHeader.style.animationName = '';
-            Password.style.filter = '';
+            Acessar.style.filter = '';
         }
     }
     
@@ -70,4 +69,5 @@
     });
     
     </script>
+
 </body>
